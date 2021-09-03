@@ -43,6 +43,16 @@ def test_save_multiple_users(self):
     test_user = User("Test", "user", "test@user.com")
     test_user.save_user()
     self.assertEqual(len(User.user_list), 2) 
-    
-       
+
+def test_display_users(self):
+    """
+    Method to return a list of users
+    """  
+
+    self.assertEqual(User.dispalay_users(),User.user_list)
+
+
+if __name__ == '__main__':
+    unittest.main()    
+
            
