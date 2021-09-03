@@ -15,3 +15,10 @@ def __init__(self, user_name, passward):
 
     self.user_name = user_name
     self.passward = passward    
+
+def save_user(self):
+    """
+    A method which saves the new user instance on the user_list
+    """
+
+    User.user_list.append(self)    
