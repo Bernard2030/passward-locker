@@ -1,4 +1,4 @@
-class Credentials:
+class Credential:
     """
     A class that generates new user credentials
     """
