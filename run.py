@@ -121,6 +121,22 @@ def    passward_locker():
 
             s = "zyxabcdifghrbashiongiligalishiashiakili9867352420ABCDXYZEFGHJKLHQNMNQRNICEPC!!!@@@#%&**^$&%()??"
             created_user_passward = "".join(random.sample(s, 7))
+
+            save_user(create_user(created_user_name, created_user_passward, email_address))#creates and saves new user
+            save_credential(create_new_credential(created_user_name, created_user_passward, email_address))
+            print('\n')
+            print(f"A new account by {created_user_name} of passward {created_user_passward} has successfully been created")
+            print("\n")
+
+        elif short_code == 'du':
+
+            if display_user():
+                print("Have a look at all your accounts")
+                print('\n')
+
+                for user in display_user():
+                    print(f"{user.user_name} has an account")
+                    print('\n')    
             
 
 
