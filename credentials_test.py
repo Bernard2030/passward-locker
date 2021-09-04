@@ -32,6 +32,16 @@ def test_save_credential(self):
 
     self.new_credential.save_credential()
     self.assertEqual(len(Credential.credential_list), 1)
+
+def test_credential_available(self):
+    """
+    test to check if we can return a boolean depending on availability of a credential
+    """    
+    self.new_credential.save_credential()
+    my_credential = Credential("magnet", "ben10", "Wx123")
+    my_credential.save_credential()
+    credential_exist = Credential.if_credential_available("magnet", "ben10", "Wx123")
+    self.assertTrue(credential_exist)
 def test_display_credential(self):
     """
     test to display saved credentials
