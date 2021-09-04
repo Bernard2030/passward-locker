@@ -77,9 +77,23 @@ def cop_passward(user_name):
 
 def    passward_locker():
     while True:
-        print("Welcome to passward locker")
+        print("Welcome to passward locker!!")
         print('\n')
-        print("Welcome to your passward store.......Folllow the the guideline to choose your path... Enter one of the options. add A/c---Create New Account  ")
+        print("Select a short code to move continue:... To create a new user; use'c a/c', To login to your account; use. 'log in', To exit from your account; use. 'log out' ")
+        short_code = input().lower()
+        print('\n')
+
+        if short_code == 'c a/c':
+            print("create  user name")
+            created_user_name = input()
+
+            print("create passward")
+            created_user_passward = input()
+
+            print("confirm passward")
+            confirm_passward = input()
+
+            
 
 
 
