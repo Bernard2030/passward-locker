@@ -75,6 +75,12 @@ def cop_passward(user_name):
     """    
     return Credential.copy_passward(user_name)
 
+def    passward_locker():
+    while True:
+        print("Welcome to passward locker")
+        print('\n')
+        print("Welcome to your passward store.......Folllow the the guideline to choose your path... Enter one of the options. add A/c---Create New Account  ")
+
 
 
 
