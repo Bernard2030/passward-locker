@@ -136,7 +136,20 @@ def    passward_locker():
 
                 for user in display_user():
                     print(f"{user.user_name} has an account")
-                    print('\n')    
+                    print('\n')  
+                else:
+                    print('\n')
+                    print("It seams you don't have an existing account")
+                    print('\n')
+
+            elif short_code == "lo":
+                print("Goodbye Welcome back next time") 
+                break
+            else:
+                print("check your entry and ensure they much those in the menu")
+
+        if __name__ == '__main__':
+            passward_locker()                 
             
 
 
