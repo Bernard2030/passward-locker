@@ -119,7 +119,7 @@ while True:
             
             save_user(create_user(user_name, email,passward))
             print('*' *50)
-            print(f"Welcome {user_name} Your account is created successfully proceed to the next step.")
+            print(f"Welcome {user_name} Your account is created successfully created proceed to the next step.")
             print('*' *50)
             
 
@@ -197,7 +197,7 @@ while True:
             if find_credential(search_name):
                 search_credential = find_credential(search_name)
                 print("_"*50)
-                search_credential.delete_credentials()
+                search_credential.delete_credential()
                 print('\n')
                 print(f"Your stored credentials for : {search_credential.account} successfully deleted!!!")
                 print('\n')
