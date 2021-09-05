@@ -27,7 +27,7 @@ def test__init__(self):
     self.assertEqual(self.new_user.passward, "Bro@xyz2030")
     self.assertEqual(self.new_user.email, "brobernard.254@gmail.com")
 
-def test_save_user(self):
+def save_user(self):
     """
     test case to test if the uder object is saved into the user_list
     """
@@ -35,7 +35,7 @@ def test_save_user(self):
     self.new_user.save_user()
     self.assertEqual(len(User.user_list), 1)
 
-def test_save_multiple_users(self):
+def save_multiple_users(self):
     """
     Test to check if we can save more than one user
     """
@@ -44,7 +44,7 @@ def test_save_multiple_users(self):
     test_user.save_user()
     self.assertEqual(len(User.user_list), 2) 
 
-def test_display_users(self):
+def display_users(self):
     """
     Method to return a list of users
     """  

@@ -8,7 +8,7 @@ class User:
     """
     user_list = []
 
-def __init__(self, user_name, passward, email):
+def __init__(self, user_name, email, passward):
     """
     Method defining user properties
     """
