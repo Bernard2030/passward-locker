@@ -123,7 +123,7 @@ while True:
             print('*' *50)
             
 
-        elif short_code == 'lg':
+            elif short_code == 'lg':
             #login the user
             print('*' *50)
             print("Enter your user name..")
@@ -134,18 +134,18 @@ while True:
             login = login_user(user_name, passward)
             if login_user(user_name,)
 
-        elif short_code == 'da':
-         if check_passward(user_name): #check if user exist
-            if check_passward(user_name, passward):
+                elif short_code == 'da':
+            if check_passward(user_name): #check if user exist
+              if check_passward(user_name, passward):
                 print("\n")
                 print(f"Welcome{user_name}")
                 print('*' *50)
                 login_user == login:
 
-        while True:
-            print("Use these short codes:\n cc - Create a new credential, \n dc - display credential \n fc - find a credential \n gp - generate random passward \n d - delete credential \n ex - exit application \n")
-            short_code = input().lower
-            if short_code == "cc":
+            while True:
+              print("Use these short codes:\n cc - Create a new credential, \n dc - display credential \n fc - find a credential \n gp - generate random passward \n d - delete credential \n ex - exit application \n")
+                elif short_code = input().lower
+                if short_code == "cc":
                 print("Create New Credential")
                 print("*" *50)
                 print("Account name..")
