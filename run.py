@@ -1,21 +1,21 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python3.9
 from unittest.main import main
 from passward import User
 from credentials import Credential
 
 
-def create_new_user(user_name, email, password):
+def create_new_user(user_name, password):
     '''
     create a new user with a username email and password
     '''
-    new_user = User(user_name, email, password)
+    new_user = User(user_name, password)
     return new_user
 
 def save_user(user): 
     '''
      save a new user
     '''
-    User.save_user()
+    user.save_user()
 def display_user():
     """
      display existing user
@@ -39,7 +39,7 @@ def save_credential(credentials):
     """
    save Credentials to the credentials list
     """
-    Credential. save_details()
+    credentials. save_credential()
 def display_accounts_details():
     """
      returns all the saved credential.
@@ -79,17 +79,17 @@ def passward_loccker():
         print("Get Account")
         print('*' * 50)
         user_name = input("enter your user name: ")
-        while True:
-            print(" ep - enter pasword:\n gp - generate random Password")
-            password_Choice = input().lower()
-            if password_Choice == 'ep':
-                password = input("Enter Password\n")
-                break
-            elif password_Choice == 'gp':
-                password = generatePassword()
-                break
-            else:
-                print("Invalid  try again")
+        # while True:
+        print(" ep - enter pasword:\n gp - generate random Password")
+        password_Choice = input().lower()
+        if password_Choice == 'ep':
+            password = input("Enter Password\n")
+            # break
+        elif password_Choice == 'gp':
+            password = generatePassword()
+            # break
+        else:
+            print("Invalid  try again")
         save_user(create_new_user(user_name,password))
         print("*"*85)
         print(f"Hello {user_name}, Welcome your account is successfuly created! Your password is: {password}")
@@ -113,18 +113,18 @@ def passward_loccker():
             print("Account name ....")
             account = input().lower()
             print("Your Account username")
-            userName = input()
-            while True:
-                print(" ep - enter pasword if  already have an account:\n gp -  generate random Password")
-                password_Choice = input().lower()
-                if password_Choice == 'ep':
-                    password = input("Enter Your  Password\n")
-                    break
-                elif password_Choice == 'gp':
-                    password = generate_Password()
-                    break
-                else:
-                    print("Invalid passward try again")
+            user_name = input()
+            # while True:
+            print(" ep - enter pasword if  already have an account:\n gp -  generate random Password")
+            password_Choice = input().lower()
+            if password_Choice == 'ep':
+                password = input("Enter Your  Password\n")
+                # break
+            elif password_Choice == 'gp':
+                password = generatePassword()
+                # break
+            else:
+                print("Invalid passward try again")
             save_credential(create_new_credential(account,user_name, password))
             print('\n')
             print(f"Account Credential for: {account} - Username: {user_name} - Password:{password} created succesfully")
@@ -168,7 +168,7 @@ def passward_loccker():
 
         elif short_code == 'gp':
 
-            password = generate_Password()
+            password = generatePassword()
             print(f" {password} Has succesfully been generated . You can proceed to use it to your account")
         elif short_code == 'ex':
             print("Thanks for using passwords lock .. wrelcome next time!")
