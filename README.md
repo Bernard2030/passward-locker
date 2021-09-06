@@ -1,19 +1,19 @@
-Password-Locker
-Developer
-Bernard Opiyo
-Project Description
+## Password-Locker
+## Developer
+## Bernard Opiyo
+## Project Description
 An application that manages user passwards and generates new ones and save them.
-Setup Requirements
-- Github
-- Code Editor of your choice
-Setup Installation
-- Fork app from github
-- Clone the app in your terminal using $git clone command
-- Run the code in your code editor  using :
-$ chmod +x run.py
-$ ./run.py command
-BDD
-Behaviour	Input	Output
+## Setup Requirements
+* Github
+* Code Editor of your choice
+## Setup Installation
+* Fork app from github
+* Clone the app in your terminal using $git clone command
+* Run the code in your code editor  using :
+ * $ chmod +x run.py
+ *$ ./run.py command
+## BDD
+* Behaviour	* Input	* Output
 Run the application in the terminal of your code editor	$ ./run.py	Welcome to passward locker!!
 select a short code to continue: ca - create a/c, lg - login to a/c, da - display a/c and ex - exit from the application
 input ca	create user account, enter your user name enter your email.
@@ -49,13 +49,13 @@ Thanks for using passward lock
 wrong entry try again
 Enter valid input
 
-Known Bugs
+## Known Bugs
 The application works perfectly well,there are no known bugs if you find any let me know.
-Technologies used
+## Technologies used
 - Python
-Contacts:
+## Contacts:
 Email :brobernard.254@gmail.com
-LICENCE
+## LICENCE
 [MIT License](https://choosealicense.com/licenses/mit/)
 Copyright (c) [2021] [Bernard Opiyo]
 Permission is hereby granted, free of charge, to any person obtaining a copy
