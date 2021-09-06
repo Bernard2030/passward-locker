@@ -13,13 +13,14 @@ An application that manages user passwards and generates new ones and save them.
  * $ chmod +x run.py
  * $ ./run.py command
 ## BDD
- Behaviour        | Input          | Output |
+ <!-- Behaviour        | Input          | Output |
 | ------------- |:-------------:| -----:|
 | col 3 is      | $ ./run.py	 | Welcome to passward-locker!! |
 | select a short code to continue:     | ca      |   create account|
-|login | li       |    login to a/c |
+|login | li       |    login to a/c | -->
 
-* Behaviour	* Input	* Output
+
+<!-- * Behaviour	* Input	* Output -->
 Run the application in the terminal of your code editor	$ ./run.py	Welcome to passward-locker!!
 select a short code to continue: ca - create a/c, li - login to a/c, 
 input ca	Get Account, enter your user name enter your email.
