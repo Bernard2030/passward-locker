@@ -8,7 +8,7 @@ class TestOne(unittest.TestCase):
         Method to run before any other test case
         """
 
-        self.new_credential = Credential("user_name", "passward", "email")
+        self.new_credential = Credential("user_name", "email", "passward" )
 
 def tearDown(self):
     """
@@ -22,8 +22,9 @@ def test__init__(self):
     test case to test if the object property is correctly initialized
     """    
     self.assertEqual(self.new_credential.use_name, "user_name")
-    self.assertEqual(self.new_credential.passward, "passward")
     self.assertEqual(self.new_credential.email, "email")
+    self.assertEqual(self.new_credential.passward, "passward")
+    
 
 def save_credential(self):
     """
