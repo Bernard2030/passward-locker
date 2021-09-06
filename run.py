@@ -73,12 +73,12 @@ def generatePassword():
 
 def passward_loccker():
     print("Welcome to passward-locker")
-    print("\n Enter your short_code as follows.\n ca ---  Create New Account  \n li ---  Have an a/c  \n")
+    print("\n select your short code to continue.\n ca ---  Create a/c \n li ---  login to a/c  \n")
     short_code=input("").lower()
     if short_code == "ca":
         print("Get Account")
         print('*' * 50)
-        user_name = input("User_name: ")
+        user_name = input("enter your user name: ")
         while True:
             print(" ep - enter pasword:\n gp - generate random Password")
             password_Choice = input().lower()
@@ -92,7 +92,7 @@ def passward_loccker():
                 print("Invalid  try again")
         save_user(create_new_user(user_name,password))
         print("*"*85)
-        print(f"Hello {user_name}, Your account has been created succesfully! Your password is: {password}")
+        print(f"Hello {user_name}, Welcome your account is successfuly created! Your password is: {password}")
         print("*"*80)
     elif short_code == "li":
         print("*"*50)
@@ -105,7 +105,7 @@ def passward_loccker():
             print(f"Hello {user_name}.Welcome to passWord-locker ")  
             print('\n')
     while True:
-        print("Use these short codes:\n cc - Create a new credential \n dc - Display Credentials \n fc - Find a credential \n gp - Generate A randomn password \n d - Delete credential \n ex - Exit the application \n")
+        print("Use these short codes:\n cc - Create a new credential \n dc - Display Credentials \n fc - Find a credential \n gp - Generate  randomn password \n d - Delete credential \n ex - Exit the application \n")
         short_code = input().lower().strip()
         if short_code == "cc":
             print("Create New Credential")
@@ -115,7 +115,7 @@ def passward_loccker():
             print("Your Account username")
             userName = input()
             while True:
-                print(" ep - enter pasword if you already have an account:\n gp -  generate random Password")
+                print(" ep - enter pasword if  already have an account:\n gp -  generate random Password")
                 password_Choice = input().lower()
                 if password_Choice == 'ep':
                     password = input("Enter Your  Password\n")
@@ -127,7 +127,7 @@ def passward_loccker():
                     print("Invalid passward try again")
             save_credential(create_new_credential(account,user_name, password))
             print('\n')
-            print(f"Account Credential for: {account} - UserName: {user_name} - Password:{password} created succesfully")
+            print(f"Account Credential for: {account} - Username: {user_name} - Password:{password} created succesfully")
             print('\n')
         elif short_code == "dc":
             if display_accounts_details():
@@ -136,19 +136,19 @@ def passward_loccker():
                 print('*' *50)
                 print('*'*50)
                 for account in display_accounts_details():
-                    print(f" Account:{account.account} \n User Name:{user_name}\n Password:{password}")
+                    print(f" Account:{account.account} \n Username:{user_name}\n Password:{password}")
                     print('*'*50)
                 print('*' *50)
             else:
                 print("You don't have any credentials ..........")
         elif short_code == "fc":
-            print("Enter the account name you're searching")
+            print("Enter the account name you want to search")
             search_name = input().lower()
             if find_credential(search_name):
                 search_credential = find_credential(search_name)
-                print(f"account Name : {search_credential.account}")
+                print(f"account name : {search_credential.account}")
                 print('*' *50)
-                print(f"user name: {search_credential.user_name} Password :{search_credential.password}")
+                print(f"username: {search_credential.user_name} Password :{search_credential.password}")
                 print('*' *50)
             else:
                 print(" Credential does not exist")
@@ -169,14 +169,14 @@ def passward_loccker():
         elif short_code == 'gp':
 
             password = generate_Password()
-            print(f" {password} Has been generated succesfull. You can proceed to use it to your account")
+            print(f" {password} Has succesfully been generated . You can proceed to use it to your account")
         elif short_code == 'ex':
-            print("Thanks for using passwords .. wlcome next time!")
+            print("Thanks for using passwords lock .. wrelcome next time!")
             break
         else:
-            print("Wrong entry... Check your entry again and let it match those in the menu")
+            print("Wrong entry... Check your entry again and l match  it with those in the menu")
     else:
-        print("Please enter a valid input to continue")
+        print("Enter a valid input")
 
 if __name__ == '__main__':
     passward_loccker()

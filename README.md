@@ -11,42 +11,53 @@ An application that manages user passwards and generates new ones and save them.
 * Clone the app in your terminal using $git clone command
 * Run the code in your code editor  using :
  * $ chmod +x run.py
- *$ ./run.py command
+ * $ ./run.py command
 ## BDD
+ Behaviour        | Input          | Output |
+| ------------- |:-------------:| -----:|
+| col 3 is      | $ ./run.py	 | Welcome to passward-locker!! |
+| select a short code to continue:     | ca      |   create account|
+|login | li       |    login to a/c |
+
 * Behaviour	* Input	* Output
-Run the application in the terminal of your code editor	$ ./run.py	Welcome to passward locker!!
-select a short code to continue: ca - create a/c, lg - login to a/c, da - display a/c and ex - exit from the application
-input ca	create user account, enter your user name enter your email.
-enter passward, generate random passward
+Run the application in the terminal of your code editor	$ ./run.py	Welcome to passward-locker!!
+select a short code to continue: ca - create a/c, li - login to a/c, 
+input ca	Get Account, enter your user name enter your email.
+ep - enter passward, gp - generate random passward
 enter passward
 invalid try again
-welcome your account is successfully created proceed to the next step
- enter your user name
- enter your passward
+welcome your account is successfully created! Your passward is:
+ enter your user name and your passward
+ Hello{user_name}welcome to passward-locker
  Use these short codes:
  cc create a new credential
  fc find credential
  dc display credential
  gp generate random passward
  d delete credential
+ ex Exit the application
 
 Create new Credential
 account name
-youruser name
+your account user name
 ep enter passward if already have an account
 gp generate random passward
-invalid try again
-account credential for user name
+invalid passward try again
+account credential for: {account} username {user_name} passward {passward} created succesfully
+
+short_code dc
 here is your list of accounts
-You dont have any credentials saved yet
-enter account name you want to search for
-That credential does not exist
+Account {account.account}, username {user_name}, passward {passward}
+You dont have any credentials...
+enter account name you want to search...
+account name, username, passward
+Credential does not exist
 Enter the account name of the credential you want to delete
-your stored credential successfully deleted
-The credential you want to delete does not exist
-has successfully been generated
-Thanks for using passward lock
-wrong entry try again
+your  credential for: successfully deleted!!!
+Credential you want to delete does not exist
+Has successfully been generated you can proceed to use it in your account.
+Thanks for using passward lock welcome next time
+Wrong entry....check your entry again and match it with those in the menu
 Enter valid input
 
 ## Known Bugs
